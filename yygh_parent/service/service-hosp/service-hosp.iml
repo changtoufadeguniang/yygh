@@ -26,8 +26,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="model" />
-    <orderEntry type="module" module-name="service_util" />
-    <orderEntry type="module" module-name="model" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.10" level="project" />
     <orderEntry type="module" module-name="service_util" />
     <orderEntry type="module" module-name="common_util" />
