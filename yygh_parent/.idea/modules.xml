@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common_util/common_util.iml" filepath="$PROJECT_DIR$/common/common_util/common_util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-manage/hospital-manage.iml" filepath="$PROJECT_DIR$/hospital-manage/hospital-manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/model/model.iml" filepath="$PROJECT_DIR$/model/model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/rabbit_util/rabbit_util.iml" filepath="$PROJECT_DIR$/common/rabbit_util/rabbit_util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service-hosp/service-hosp.iml" filepath="$PROJECT_DIR$/service/service-hosp/service-hosp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_client/service_client.iml" filepath="$PROJECT_DIR$/service_client/service_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_client/service_cmn_client/service_cmn_client.iml" filepath="$PROJECT_DIR$/service_client/service_cmn_client/service_cmn_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_gateway/service_gateway.iml" filepath="$PROJECT_DIR$/service_gateway/service_gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_client/service_hosp_client/service_hosp_client.iml" filepath="$PROJECT_DIR$/service_client/service_hosp_client/service_hosp_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_client/service_order_client/service_order_client.iml" filepath="$PROJECT_DIR$/service_client/service_order_client/service_order_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_client/service_user_client/service_user_client.iml" filepath="$PROJECT_DIR$/service_client/service_user_client/service_user_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/service_util/service_util.iml" filepath="$PROJECT_DIR$/common/service_util/service_util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yygh_parent.iml" filepath="$PROJECT_DIR$/yygh_parent.iml" />
+    </modules>
+  </component>
+</project>
