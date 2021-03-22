@@ -1,0 +1,43 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+.DS_Store
+ 
+### STS ###
+.apt_generated/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.mvn/
+*.log
+*.gz
+*.tmp
+desktop.ini
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+*.lock
+
+### app ###
+bower_components/
+node_modules/
+.vscode/
+*.rar
+zjbpm-parent/zjbpm-process/.bpmn/src/main/resources/activiti/bpmn/WellLocationManage.bpmn2d
+tools/nginx-1.16.1/logs/nginx.pid
+
+package-lock.json
+

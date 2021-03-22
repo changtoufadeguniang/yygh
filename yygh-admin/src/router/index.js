@@ -26,32 +26,51 @@ export const constantRouterMap = [
   { path: '/404', component: () => import('@/views/404'), hidden: true },
 
   {
-    path: '/hosp',
+    path: '/hospSet',
     component: Layout,
-    redirect: '/hosp/hospital/list',
-    name: 'hospital',
-    meta: { title: '医院管理', icon: 'table' },
+    redirect: '/hospSet/list',
+    name: '医院设置管理',
+    meta: { title: '医院设置管理', icon: 'example' },
     children: [
       {
-        path: 'hospitalSet/list',
-        name: '医院设置',
-        component: () => import('@/views/hosp/hospitalSet/list'),
-        meta: { title: '医院设置' }
+        path: 'list',
+        name: '医院设置列表',
+        component: () => import('@/views/hospset/list'),
+        meta: { title: '医院设置列表', icon: 'table' }
+      },
+      {
+        path: 'add',
+        name: '医院设置添加',
+        component: () => import('@/views/hospset/add'),
+        meta: { title: '医院设置添加', icon: 'tree' }
       }
-      /* {
-        path: 'hospitalSet/add',
-        name: 'EduTeacherCreate',
-        component: () => import('@/views/hosp/hospitalSet/form'),
-        meta: { title: '添加' },
+     /*  {
+        path: 'edit/:id',
+        name: 'EduTeacherEdit',
+        component: () =>import('@/views/hospset/add'),
+        meta: { title: '编辑', noCache: true },
         hidden: true
       },
       {
-        path: 'hospitalSet/edit/:id',
-        name: 'EduTeacherEdit',
-        component: () => import('@/views/hosp/hospitalSet/form'),
-        meta: { title: '编辑', noCache: true },
+        path: 'hosp/list',
+        name: '医院列表',
+        component: () => import('@/views/hosp/list'),
+        meta: { title: '医院列表', icon: 'table' }
+      },
+      {
+        path: 'hospital/show/:id',
+        name: '查看',
+        component: () => import('@/views/hosp/show'),
+        meta: { title: '查看', noCache: true },
         hidden: true
-      } */
+      },
+      {
+        path: 'hospital/schedule/:hoscode',
+        name: '排班',
+        component: () => import('@/views/hosp/schedule'),
+        meta: { title: '排班', noCache: true },
+        hidden: true
+      }   */      
     ]
   },
 

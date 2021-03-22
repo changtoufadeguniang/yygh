@@ -7,13 +7,6 @@
         <option value="$PROJECT_DIR$/hospital-manage/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/service-hosp/pom.xml" />
-        <option value="$PROJECT_DIR$/service/service-hosp/src/main/java/com/atguigu/yygh/hosp/service_user/pom.xml" />
-        <option value="$PROJECT_DIR$/service/service_test/pom.xml" />
-      </set>
-    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
