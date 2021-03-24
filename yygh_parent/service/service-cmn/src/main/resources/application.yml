@@ -1,0 +1,37 @@
+# 服务端口
+server:
+  port: 8202
+# 服务名
+spring:
+  application:
+    name: service-cmn
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.79.128:3306/yygh_cmn?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 1234
+  redis:
+    host: 192.168.79.128
+    port: 6379
+    password: 123456
+    database: 0
+    timeout: 1800000
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: -1
+        min-idle: 0
+        max-idle: 5
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    com.atguigu.yygh: debug
+    root: info
+
+

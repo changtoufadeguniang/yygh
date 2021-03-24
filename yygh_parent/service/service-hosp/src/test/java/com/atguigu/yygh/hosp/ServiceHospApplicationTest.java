@@ -28,13 +28,13 @@ public class ServiceHospApplicationTest {
     public HospitalSetMapper hospitalSetMapper;*/
 
     @Test
-    public void  CodeGenerator(){
+    public void  CodeGenerator01(){
         // 1、创建代码生成器
         AutoGenerator mpg = new AutoGenerator();
         // 2、全局配置
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
-        gc.setOutputDir("D:\\ideaworkspace02\\yygh_parent\\service\\service-hosp" + "/src/main/java");
+        gc.setOutputDir("D:\\ideaworkspace02\\yygh_parent\\service\\service-cmn" + "/src/main/java");
         gc.setAuthor("wangjie");
         gc.setOpen(false); //生成后是否打开资源管理器（及生成后是否展开目录树）
         gc.setFileOverride(false); //重新生成时文件是否覆盖（生成代码改了之后，再此生成会覆盖已经修改的代码）
@@ -46,7 +46,7 @@ public class ServiceHospApplicationTest {
         mpg.setGlobalConfig(gc);
         // 3、数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://192.168.79.128:3306/yygh_hosp?characterEncoding=utf-8&useSSL=false");
+        dsc.setUrl("jdbc:mysql://192.168.79.128:3306/yygh_cmn?characterEncoding=utf-8&useSSL=false");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("1234");
@@ -54,7 +54,7 @@ public class ServiceHospApplicationTest {
         mpg.setDataSource(dsc);
         // 4、包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName("hosp"); //模块名（com.it包后面添加.eduservice）
+        pc.setModuleName("cmn"); //模块名（com.it包后面添加.eduservice）
         //包  com.atguigu.eduservice
         pc.setParent("com.atguigu.yygh");
         //包  com.atguigu.eduservice.controller
@@ -65,7 +65,7 @@ public class ServiceHospApplicationTest {
         mpg.setPackageInfo(pc);
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("hospital_set"); //需要操作的表名 如果是多个表需要使用英文","隔开
+        strategy.setInclude("dict"); //需要操作的表名 如果是多个表需要使用英文","隔开
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略（表示如果数据库字段是user_name,那么实体就是userName属性）
         strategy.setTablePrefix(pc.getModuleName() + "_"); //生成实体时去掉表前缀
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);//数据库表字段映射到实体的命名策略

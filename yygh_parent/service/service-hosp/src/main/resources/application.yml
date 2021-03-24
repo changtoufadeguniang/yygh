@@ -17,6 +17,9 @@ spring:
     time-zone: GMT+8
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  data:
+    mongodb:
+      uri: mongodb://192.168.79.128:27017/yygh_hosp
 logging:
   level:
     com.atguigu.yygh: debug
