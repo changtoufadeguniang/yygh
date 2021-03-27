@@ -25,7 +25,6 @@ import java.util.Random;
  * @author wangjie
  * @since 2021-03-21
  */
-@CrossOrigin
 @RestController
 @RequestMapping("/admin/hosp/hospitalSet")
 public class HospitalSetController {

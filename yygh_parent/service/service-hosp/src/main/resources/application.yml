@@ -20,6 +20,10 @@ spring:
   data:
     mongodb:
       uri: mongodb://192.168.79.128:27017/yygh_hosp
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 logging:
   level:
     com.atguigu.yygh: debug

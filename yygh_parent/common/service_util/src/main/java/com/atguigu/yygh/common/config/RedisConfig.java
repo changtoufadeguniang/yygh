@@ -31,7 +31,7 @@ public class RedisConfig {
      *
      * @return
      */
-    @Bean
+    @Bean(name = "myKeyGenerator")
     public KeyGenerator keyGenerator() {
         return new KeyGenerator() {
             @Override

@@ -12,6 +12,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
@@ -32,7 +33,7 @@ import java.util.List;
 @Service
 public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements DictService {
 
-    @Cacheable(value = "dict",keyGenerator = "keyGenerator")
+    @Cacheable(value = "dict",keyGenerator = "myKeyGenerator")
     @Override
     public List<Dict> findChlidData(Long id) {
         QueryWrapper<Dict> queryWrapper = new QueryWrapper<>();
@@ -76,6 +77,36 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public String getNameByParentDictCodeAndValue(String parentDictCode, String value) {
+        if(StringUtils.isEmpty(parentDictCode)){
+            Dict dict = baseMapper.selectOne(new QueryWrapper<Dict>().eq("value", value));
+            if(dict!=null){
+                return dict.getName();
+            }
+        }else {
+            Dict parentDict = this.getByDictsCode(parentDictCode);
+            if(null == parentDict) return "";
+            Dict dict = baseMapper.selectOne(new QueryWrapper<Dict>().eq("parent_id", parentDict.getId()).eq("value", value));
+            if(null != dict) {
+                return dict.getName();
+            }
+        }
+        return "";
+
+    }
+
+    @Override
+    public List<Dict> findByDictCode(String dictCode) {
+        Dict codeDict = this.getByDictsCode(dictCode);
+        if(null == codeDict) return null;
+        return this.findChlidData(codeDict.getId());
+    }
+
+    private Dict getByDictsCode(String parentDictCode) {
+        return baseMapper.selectOne(new QueryWrapper<Dict>().eq("dict_code", parentDictCode));
     }
 
 

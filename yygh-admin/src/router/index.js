@@ -33,24 +33,44 @@ export const constantRouterMap = [
     meta: { title: '医院设置管理', icon: 'example' },
     children: [
       {
-        path: 'list',
+        path: '/list',
         name: '医院设置列表',
         component: () => import('@/views/hospset/list'),
         meta: { title: '医院设置列表', icon: 'table' }
       },
       {
-        path: 'add',
+        path: '/add',
         name: '医院设置添加',
         component: () => import('@/views/hospset/add'),
         meta: { title: '医院设置添加', icon: 'tree' }
       },
       {
-        path: 'edit/:id',
+        path: '/edit/:id',
         name: '医院设置修改',
-        component: () =>import('@/views/hospset/add'),
+        component: () => import('@/views/hospset/add'),
         meta: { title: '编辑', noCache: true },
         hidden: true
-      },  
+      },
+      {
+        path: '/hospital/list',
+        name: '医院列表',
+        component: () => import('@/views/hosp/list'),
+        meta: { title: '医院列表', icon: 'table' }
+      },
+      {
+        path: '/hospital/show/:id',
+        name: '查看',
+        component: () => import('@/views/hosp/show'),
+        meta: { title: '查看', noCache: true },
+        hidden: true
+      },
+      {
+          path: '/hospital/schedule/:hoscode',
+          name: '排班',
+          component: () => import('@/views/hosp/schedule'),
+          meta: { title: '排班', noCache: true },
+          hidden: true
+        }
     ]
   },
 
@@ -83,7 +103,7 @@ export const constantRouterMap = [
     }]
   },
 
-  {
+  /* {
     path: '/example',
     component: Layout,
     redirect: '/example/table',
@@ -103,7 +123,7 @@ export const constantRouterMap = [
         meta: { title: 'Tree', icon: 'tree' }
       }
     ]
-  },
+  }, */
 
   {
     path: '/form',

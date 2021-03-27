@@ -29,6 +29,10 @@ spring:
     time-zone: GMT+8
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 logging:
   level:
     com.atguigu.yygh: debug

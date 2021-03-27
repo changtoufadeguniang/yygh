@@ -39,4 +39,6 @@
 6.后端有多个服务，vue前端的dev.env.js文件的BASE_API指定一个端口。可以使用nginx代理实现或者使用网关实现
 7.使用element-ui加载层级关系的表。element-ui版本太低只能加载子层的数据，需要升级element-ui版本在package.json将element-ui
   版本设置为2.12.0完了npm install重新安装依赖
+8. liunx安装启动mongodb一定要指定ip为0.0.0.0 mongodb默认使用的是127.0.0.1只让本机连不能远程连接
+8.下拉框二级联动的时候。二级下拉框选中不显示。因为层级关系太多没有更新过来，在二级下来框添加函数。函数里使用 this.$forceUpdate()强制更新一下就好了
   
